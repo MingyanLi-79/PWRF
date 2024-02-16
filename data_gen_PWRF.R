@@ -1,7 +1,3 @@
-# *****************************
-#     Date Modified: 12/16    *
-# *****************************
-# --------------- Generate X & Y, contaminate train Y --------------------
 data_gen <- function(nobs, distX = "normal", p, m = NULL,
                      train_size, sd_gam = NULL, example = c(1, 2, 3, 4)) {
   # -- Dimensionality of covariates
@@ -63,11 +59,4 @@ data_gen <- function(nobs, distX = "normal", p, m = NULL,
   TRAINY[con_id] = TRAINY[con_id] + 3*max(TRAINY)
   return(list(TRAINX = TRAINX, TRAINY = TRAINY, TESTX = TESTX, TESTY = TESTY))
 }
-
-
-# -----------------------------------------------------------------------------------------------
-dt <- data_gen(nobs = 15, p = 0.2, train_size = 10, example = 4)
-  
-  # , sd_gam = 5
-  
   
